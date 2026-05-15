@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Folia — Self-hosted Markdown knowledge base</title>
+    <meta
+      name="description"
+      content="Folia is a filesystem-first knowledge base for Markdown notes. Organize, search, and edit your notes directly on disk."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a href="#" class="brand">
+          <span class="brand-mark">F</span>
+          <span class="brand-text">Folia</span>
+        </a>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#usage">Usage</a>
+          <a href="#install">Install</a>
+          <a href="#contribute">Contribute</a>
+        </nav>
+        <a class="btn btn-small" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">SELF-HOSTED MARKDOWN KNOWLEDGE BASE</p>
+          <h1>Your Markdown library,<br />exactly where it belongs:<br /><span class="highlight">on disk.</span></h1>
+          <p class="hero-desc">
+            Folia is a filesystem-first knowledge base for Markdown notes. It scans a configured root folder, renders a live tree, and lets you create, edit, rename, copy, and move documents directly on disk.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#install"><i class="fa-solid fa-circle-down"></i> Quick Install</a>
+            <a class="btn btn-ghost" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-regular fa-star"></i> Star on GitHub</a>
+          </div>
+          <ul class="hero-meta">
+            <li><i class="fa-brands fa-node-js"></i> Node.js 20+</li>
+            <li><i class="fa-solid fa-hard-drive"></i> Your filesystem</li>
+            <li><i class="fa-solid fa-file-contract"></i> MIT</li>
+            <li><i class="fa-solid fa-microchip"></i> Raspberry Pi</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="install" class="section install-section">
+        <div class="section-label">GETTING STARTED</div>
+        <h2>One-command install</h2>
+        <p class="section-desc">Run this on your Raspberry Pi or any Linux server to deploy the latest release.</p>
+        <div class="code-card">
+          <button class="copy-btn" aria-label="Copy install command"><i class="fa-regular fa-clipboard"></i></button>
+          <pre><code id="install-cmd">curl -fsSL https://raw.githubusercontent.com/\
+lexmihaylov/folia/main/scripts/\
+install-release.sh | sudo bash</code></pre>
+        </div>
+      </section>
+
+      <section id="features" class="section features-section">
+        <div class="section-label">FEATURES</div>
+        <h2>Everything you need for a serious note library</h2>
+        <div class="feature-grid">
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-folder"></i></div>
+            <div>
+              <h3>Filesystem-backed</h3>
+              <p>No database. Reads and writes Markdown files directly in your configured root folder.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <h3>NAS friendly</h3>
+              <p>Point your library root to any SMB-mounted path — your notes live on your NAS.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <h3>Full-text search</h3>
+              <p>Search across your entire Markdown library and jump to documents in seconds.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+            <div>
+              <h3>Live editor</h3>
+              <p>Write Markdown with live preview, theme toggle, and syntax highlighting.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div>
+              <h3>Tree operations</h3>
+              <p>Create, rename, copy, cut, move, and delete files and folders inline.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-shield"></i></div>
+            <div>
+              <h3>Vault encryption</h3>
+              <p>Encrypted <code>.emd</code> notes alongside regular <code>.md</code> files.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-rotate"></i></div>
+            <div>
+              <h3>Update scripts</h3>
+              <p>Built-in update scripts let you pull the latest release and restart Folia safely in seconds.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <div class="feat-icon"><i class="fa-solid fa-box"></i></div>
+            <div>
+              <h3>Standalone deploy</h3>
+              <p>Package a Next.js standalone build and run it on lightweight hosts.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="usage" class="section usage-section">
+        <div class="section-label">USAGE</div>
+        <h2>How Folia works</h2>
+        <div class="usage-grid">
+          <div class="usage-card">
+            <div class="usage-number">01</div>
+            <h3>Run the installer</h3>
+            <p>One command downloads the latest release, prompts for your library root, installs to <code>/opt/folia</code>, and registers the <code>folia</code> service via systemd.</p>
+          </div>
+          <div class="usage-card">
+            <div class="usage-number">02</div>
+            <h3>Mount your notes storage</h3>
+            <p>Mount your NAS via SMB, set <code>libraryRoot</code> in <code>folia.config.json</code> to that path, and every <code>.md</code> file in that tree becomes a document.</p>
+          </div>
+          <div class="usage-card">
+            <div class="usage-number">03</div>
+            <h3>Open the app</h3>
+            <p>Browse <code>http://localhost:3000</code>, create an account at <code>/setup</code>, and start writing. The editor supports live preview, and the tree reflects disk state in real time.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="contribute" class="section contribute-section">
+        <div class="section-label">CONTRIBUTE</div>
+        <h2>How to contribute</h2>
+        <div class="usage-grid">
+          <div class="usage-card">
+            <div class="usage-number">01</div>
+            <h3>Start with an issue</h3>
+            <p>Open a bug report or feature request before writing code. Include reproduction steps and expected behavior so the intent is clear.</p>
+          </div>
+          <div class="usage-card">
+            <div class="usage-number">02</div>
+            <h3>Keep changes small</h3>
+            <p>Prefer focused, atomic PRs. Follow the existing code style (TypeScript, 2-space indent). Avoid unrelated refactors in the same change.</p>
+          </div>
+          <div class="usage-card">
+            <div class="usage-number">03</div>
+            <h3>Review before merging</h3>
+            <p>All AI-generated and human-written code is reviewed for correctness, security, edge cases, and maintainability before it lands.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section next-section">
+        <div class="next-inner">
+          <h2>Ready to self-host your notes?</h2>
+          <p>Clone the repo, explore the docs, or contribute on GitHub.</p>
+          <div class="hero-cta" style="justify-content: center">
+            <a class="btn" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
+            <a class="btn btn-ghost" href="#install"><i class="fa-solid fa-circle-down"></i> Install Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><i class="fa-solid fa-leaf"></i> Built for makers who value simplicity.</p>
+      <a href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> github.com/lexmihaylov/folia</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
