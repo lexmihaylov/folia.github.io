@@ -78,7 +78,6 @@
         <nav class="top-nav" aria-label="Main navigation">
           <a href="#features">Features</a>
           <a href="#usage">Usage</a>
-          <a href="#install">Install</a>
           <a href="#contribute">Contribute</a>
         </nav>
         <a class="btn btn-small" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="Folia on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
@@ -94,8 +93,13 @@
             Folia is a filesystem-first knowledge base for Markdown notes. It scans a configured root folder, renders a live tree, and lets you create, edit, rename, copy, and move documents directly on disk.
           </p>
           <div class="hero-cta">
-            <a class="btn" href="#install" aria-label="Quick Install Folia"><i class="fa-solid fa-circle-down" aria-hidden="true"></i> Quick Install</a>
             <a class="btn btn-ghost" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="Star Folia on GitHub"><i class="fa-regular fa-star" aria-hidden="true"></i> Star on GitHub</a>
+          </div>
+          <div class="hero-code">
+            <div class="code-card">
+              <button class="copy-btn" aria-label="Copy install command"><i class="fa-regular fa-clipboard"></i></button>
+              <pre><code id="install-cmd">curl -fsSL https://raw.githubusercontent.com/lexmihaylov/folia/main/scripts/install-release.sh | sudo bash</code></pre>
+            </div>
           </div>
           <ul class="hero-meta">
             <li><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js 20+</li>
@@ -103,18 +107,6 @@
             <li><i class="fa-solid fa-file-contract" aria-hidden="true"></i> MIT</li>
             <li><i class="fa-solid fa-microchip" aria-hidden="true"></i> Raspberry Pi</li>
           </ul>
-        </div>
-      </section>
-
-      <section id="install" class="section install-section">
-        <div class="section-label">GETTING STARTED</div>
-        <h2>One-command install</h2>
-        <p class="section-desc">Run this on your Raspberry Pi or any Linux server to deploy the latest release.</p>
-        <div class="code-card">
-          <button class="copy-btn" aria-label="Copy install command"><i class="fa-regular fa-clipboard"></i></button>
-          <pre><code id="install-cmd">curl -fsSL https://raw.githubusercontent.com/\
-lexmihaylov/folia/main/scripts/\
-install-release.sh | sudo bash</code></pre>
         </div>
       </section>
 
@@ -232,7 +224,7 @@ install-release.sh | sudo bash</code></pre>
           <p>Clone the repo, explore the docs, or contribute on GitHub.</p>
           <div class="hero-cta" style="justify-content: center">
             <a class="btn" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="View Folia on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
-            <a class="btn btn-ghost" href="#install" aria-label="Install Folia now"><i class="fa-solid fa-circle-down" aria-hidden="true"></i> Install Now</a>
+            <a class="btn btn-ghost" href="#" aria-label="Install Folia now"><i class="fa-solid fa-circle-down" aria-hidden="true"></i> Install Now</a>
           </div>
         </div>
       </section>

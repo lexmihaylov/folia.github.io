@@ -25,8 +25,7 @@ if (!prefersReduced) {
 
   const groups = [
     { selector: '.hero-inner > *', anim: 'blur-reveal', stagger: 130 },
-    { selector: '.install-section .section-label, .install-section h2, .install-section .section-desc', anim: 'fade-up', stagger: 100 },
-    { selector: '.install-section .code-card', anim: 'fade-up', stagger: 0 },
+    { selector: '.hero-code', anim: 'fade-up', stagger: 0 },
     { selector: '.feat', anim: 'slide-in', stagger: 80, dir: (i) => i % 2 === 0 ? 'left' : 'right' },
     { selector: '.usage-section .usage-card', anim: 'fade-up', stagger: 150 },
     { selector: '.contribute-section .usage-card', anim: 'fade-up', stagger: 150 },

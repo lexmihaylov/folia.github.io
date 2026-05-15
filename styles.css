@@ -231,6 +231,16 @@ h1 {
   gap: 0.75rem;
 }
 
+.hero-code {
+  max-width: 640px;
+  margin: 1.4rem auto 0;
+  text-align: left;
+}
+
+.hero-code .code-card {
+  font-size: 0.82rem;
+}
+
 .hero-meta {
   margin: 1rem auto 0;
   padding: 0;
