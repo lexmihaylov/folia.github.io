@@ -3,11 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Folia — Self-hosted Markdown knowledge base</title>
+    <title>Folia — Self-hosted Markdown knowledge base for your NAS or Raspberry Pi</title>
     <meta
       name="description"
-      content="Folia is a filesystem-first knowledge base for Markdown notes. Organize, search, and edit your notes directly on disk."
+      content="Folia is a filesystem-first, self-hosted Markdown knowledge base. Organize, search, and edit notes directly on disk — no database, no lock-in. Works on Raspberry Pi, NAS, and any Linux server."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://folia.app/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://folia.app/" />
+    <meta property="og:title" content="Folia — Self-hosted Markdown knowledge base" />
+    <meta property="og:description" content="Filesystem-first Markdown knowledge base. Self-host on your NAS or Raspberry Pi. No database, no lock-in." />
+    <meta property="og:image" content="https://folia.app/og-image.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Folia — Self-hosted Markdown knowledge base" />
+    <meta name="twitter:description" content="Filesystem-first Markdown knowledge base. Self-host on your NAS or Raspberry Pi." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,12 +35,44 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Folia",
+      "applicationCategory": "WebApplication",
+      "operatingSystem": "Linux, macOS",
+      "description": "A filesystem-first, self-hosted Markdown knowledge base. Organize, search, and edit your notes directly on disk.",
+      "url": "https://folia.app/",
+      "sameAs": "https://github.com/lexmihaylov/folia",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Aleksandar Mihaylov"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Folia",
+      "url": "https://folia.app/",
+      "description": "Self-hosted Markdown knowledge base that works directly with your filesystem."
+    }
+    </script>
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <div class="nav-wrap">
-        <a href="#" class="brand">
-          <span class="brand-mark">F</span>
+        <a href="#" class="brand" aria-label="Folia home">
+          <span class="brand-mark" aria-hidden="true">F</span>
           <span class="brand-text">Folia</span>
         </a>
         <nav class="top-nav" aria-label="Main navigation">
@@ -30,11 +81,11 @@
           <a href="#install">Install</a>
           <a href="#contribute">Contribute</a>
         </nav>
-        <a class="btn btn-small" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a class="btn btn-small" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="Folia on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
       </div>
     </header>
 
-    <main>
+    <main role="main">
       <section class="hero">
         <div class="hero-inner">
           <p class="eyebrow">SELF-HOSTED MARKDOWN KNOWLEDGE BASE</p>
@@ -43,14 +94,14 @@
             Folia is a filesystem-first knowledge base for Markdown notes. It scans a configured root folder, renders a live tree, and lets you create, edit, rename, copy, and move documents directly on disk.
           </p>
           <div class="hero-cta">
-            <a class="btn" href="#install"><i class="fa-solid fa-circle-down"></i> Quick Install</a>
-            <a class="btn btn-ghost" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-regular fa-star"></i> Star on GitHub</a>
+            <a class="btn" href="#install" aria-label="Quick Install Folia"><i class="fa-solid fa-circle-down" aria-hidden="true"></i> Quick Install</a>
+            <a class="btn btn-ghost" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="Star Folia on GitHub"><i class="fa-regular fa-star" aria-hidden="true"></i> Star on GitHub</a>
           </div>
           <ul class="hero-meta">
-            <li><i class="fa-brands fa-node-js"></i> Node.js 20+</li>
-            <li><i class="fa-solid fa-hard-drive"></i> Your filesystem</li>
-            <li><i class="fa-solid fa-file-contract"></i> MIT</li>
-            <li><i class="fa-solid fa-microchip"></i> Raspberry Pi</li>
+            <li><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js 20+</li>
+            <li><i class="fa-solid fa-hard-drive" aria-hidden="true"></i> Your filesystem</li>
+            <li><i class="fa-solid fa-file-contract" aria-hidden="true"></i> MIT</li>
+            <li><i class="fa-solid fa-microchip" aria-hidden="true"></i> Raspberry Pi</li>
           </ul>
         </div>
       </section>
@@ -72,56 +123,56 @@ install-release.sh | sudo bash</code></pre>
         <h2>Everything you need for a serious note library</h2>
         <div class="feature-grid">
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-folder"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-folder"></i></div>
             <div>
               <h3>Filesystem-backed</h3>
               <p>No database. Reads and writes Markdown files directly in your configured root folder.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></div>
             <div>
               <h3>NAS friendly</h3>
               <p>Point your library root to any SMB-mounted path — your notes live on your NAS.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
             <div>
               <h3>Full-text search</h3>
               <p>Search across your entire Markdown library and jump to documents in seconds.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-regular fa-pen-to-square"></i></div>
             <div>
               <h3>Live editor</h3>
               <p>Write Markdown with live preview, theme toggle, and syntax highlighting.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-code-branch"></i></div>
             <div>
               <h3>Tree operations</h3>
               <p>Create, rename, copy, cut, move, and delete files and folders inline.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-shield"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-shield"></i></div>
             <div>
               <h3>Vault encryption</h3>
               <p>Encrypted <code>.emd</code> notes alongside regular <code>.md</code> files.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-rotate"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-rotate"></i></div>
             <div>
               <h3>Update scripts</h3>
               <p>Built-in update scripts let you pull the latest release and restart Folia safely in seconds.</p>
             </div>
           </div>
           <div class="feat">
-            <div class="feat-icon"><i class="fa-solid fa-box"></i></div>
+            <div class="feat-icon" aria-hidden="true"><i class="fa-solid fa-box"></i></div>
             <div>
               <h3>Standalone deploy</h3>
               <p>Package a Next.js standalone build and run it on lightweight hosts.</p>
@@ -180,16 +231,16 @@ install-release.sh | sudo bash</code></pre>
           <h2>Ready to self-host your notes?</h2>
           <p>Clone the repo, explore the docs, or contribute on GitHub.</p>
           <div class="hero-cta" style="justify-content: center">
-            <a class="btn" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> View on GitHub</a>
-            <a class="btn btn-ghost" href="#install"><i class="fa-solid fa-circle-down"></i> Install Now</a>
+            <a class="btn" href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="View Folia on GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            <a class="btn btn-ghost" href="#install" aria-label="Install Folia now"><i class="fa-solid fa-circle-down" aria-hidden="true"></i> Install Now</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p><i class="fa-solid fa-leaf"></i> Built for makers who value simplicity.</p>
-      <a href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> github.com/lexmihaylov/folia</a>
+    <footer class="site-footer" role="contentinfo">
+      <p><i class="fa-solid fa-leaf" aria-hidden="true"></i> Built for makers who value simplicity.</p>
+      <a href="https://github.com/lexmihaylov/folia" target="_blank" rel="noreferrer" aria-label="Folia GitHub repository"><i class="fa-brands fa-github" aria-hidden="true"></i> github.com/lexmihaylov/folia</a>
     </footer>
 
     <script src="./script.js"></script>
