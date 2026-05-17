@@ -3,6 +3,8 @@
   --paper: #f4f4f5;
   --panel: #efeff1;
   --mint: #dce3dd;
+  --accent: #3d7a5a;
+  --accent-soft: #e6f0ea;
   --text: #16171a;
   --muted: #676a72;
   --line: #d8d8de;
@@ -89,7 +91,7 @@ code {
 }
 
 .nav-wrap {
-  max-width: 1380px;
+  max-width: 1040px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -138,7 +140,7 @@ code {
 }
 
 .top-nav a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .btn {
@@ -171,8 +173,20 @@ code {
   background: transparent;
 }
 
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  background: #2d664a;
+  border-color: #2d664a;
+  color: #fff;
+}
+
 main {
-  max-width: 1380px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 1.2rem 1.2rem;
 }
@@ -189,7 +203,7 @@ main {
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   background:
-    linear-gradient(90deg, var(--mint) 0%, #efeff1 42%, #efeff1 100%);
+    linear-gradient(90deg, var(--mint) 0%, var(--accent-soft) 38%, #efeff1 100%);
   padding: clamp(2.2rem, 6vw, 4.3rem) 1.2rem clamp(2rem, 5vw, 3.1rem);
 }
 
@@ -198,7 +212,7 @@ main {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.34em;
-  color: #71747c;
+  color: var(--accent);
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -212,7 +226,7 @@ h1 {
 }
 
 .highlight {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .hero-desc {
@@ -298,7 +312,8 @@ h1 {
 
 .code-card pre {
   margin: 0;
-  white-space: pre-wrap;
+  overflow-x: auto;
+  white-space: pre;
 }
 
 .code-card code {
@@ -346,8 +361,8 @@ h1 {
   border-radius: 8px;
   display: grid;
   place-items: center;
-  background: #ececef;
-  color: #5f636c;
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .feat h3,
@@ -380,7 +395,7 @@ h1 {
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.28em;
-  color: #7a7d86;
+  color: var(--accent);
   margin-bottom: 0.55rem;
 }
 
@@ -401,7 +416,7 @@ h1 {
 }
 
 .site-footer {
-  max-width: 1380px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 1rem 1.2rem 1.6rem;
   display: flex;
